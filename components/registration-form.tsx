@@ -557,44 +557,7 @@ export default function RegistrationForm() {
                     </InputWithIcon>
                   </FormField>
 
-                  <FormField
-                    label="Téléphone"
-                    error={errors.telephone?.message}
-                    icon={<Phone className="h-4 w-4" />}
-                    optional
-                  >
-                    <div
-                      className="flex items-stretch rounded-xl border overflow-hidden transition-all h-11"
-                      style={{
-                        borderColor: PAC.grayBorder,
-                        backgroundColor: PAC.gray,
-                      }}
-                    >
-                      <span
-                        className="flex items-center gap-1.5 px-3 text-sm font-medium tabular-nums border-r"
-                        style={{
-                          backgroundColor: "#EDEDED",
-                          borderColor: PAC.grayBorder,
-                          color: PAC.blackSoft,
-                        }}
-                      >
-                        <Phone
-                          className="h-3.5 w-3.5"
-                          style={{ color: PAC.blackSoft }}
-                        />
-                        {dialCode || "+..."}
-                      </span>
-                      <input
-                        type="tel"
-                        {...register("telephone")}
-                        placeholder="6 12 34 56 78"
-                        className="flex-1 px-3 outline-none text-base bg-transparent"
-                      />
-                    </div>
-                  </FormField>
-                </div>
-
-                {/* PAYS avec drapeaux */}
+                                  {/* PAYS avec drapeaux */}
                 <FormField
                   label="Pays"
                   required
@@ -683,6 +646,43 @@ export default function RegistrationForm() {
                     )}
                   />
                 </FormField>
+
+                  <FormField
+                    label="Téléphone"
+                    error={errors.telephone?.message}
+                    icon={<Phone className="h-4 w-4" />}
+                    optional
+                  >
+                    <div
+                      className="flex items-stretch rounded-xl border overflow-hidden transition-all h-11"
+                      style={{
+                        borderColor: PAC.grayBorder,
+                        backgroundColor: PAC.gray,
+                      }}
+                    >
+                      <span
+                        className="flex items-center gap-1.5 px-3 text-sm font-medium tabular-nums border-r"
+                        style={{
+                          backgroundColor: "#EDEDED",
+                          borderColor: PAC.grayBorder,
+                          color: PAC.blackSoft,
+                        }}
+                      >
+                        <Phone
+                          className="h-3.5 w-3.5"
+                          style={{ color: PAC.blackSoft }}
+                        />
+                        {dialCode || "+..."}
+                      </span>
+                      <input
+                        type="tel"
+                        {...register("telephone")}
+                        placeholder="6 12 34 56 78"
+                        className="flex-1 px-3 outline-none text-base bg-transparent"
+                      />
+                    </div>
+                  </FormField>
+                </div>
 
                 {/* SECTION 2 */}
                 <div className="pt-2">
